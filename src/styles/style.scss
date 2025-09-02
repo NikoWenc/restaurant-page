@@ -1,3 +1,8 @@
+
+@use "./section-styles/variables" as *;
+@use "./section-styles/nav-hero";
+@use "./section-styles/content";
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,68 +10,5 @@
 }
 
 body {
-    background-color: black;
-}
-
-header {
-    height: 100vh;
-    width: 100vw;
-    padding: 1rem 10rem 0 10rem;
-
-    background-image: url('/src/images/unnamed-3-1024x768.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
-    position: relative;
-
-    &::after{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        position: relative;
-        z-index: 1;
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            gap: 5px;
-
-            img {
-                block-size: 4rem;
-            };
-
-            p {
-                font-size: 3rem;
-            }
-        }
-
-        button {
-            border-radius: 0.5rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            padding: 0.5rem 1rem;
-            background-color: transparent;
-            color: white;
-            border: none;
-
-            &:focus, &:hover{
-                background-color: white;
-                color: black;
-            }
-        }
-    }
-}
-
-#content {
-    color: white;
+    background-color: $black-bg;
 }

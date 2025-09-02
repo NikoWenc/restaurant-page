@@ -1,0 +1,89 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+.nav-hero {
+    height: 100vh;
+    padding: 1rem 10rem 0 10rem;
+
+    background-image: url('/src/images/unnamed-3-1024x768.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav {
+
+        @include flex(space-between, center, row);
+
+        gap: 2rem;
+        position: relative;
+        z-index: 1;
+
+        .logo {
+            @include flex(center, center, row);
+            color: $white-text-color;
+            gap: 5px;
+            
+            img{
+                block-size: 4rem;
+            };
+            p {
+                font-size: 3rem;
+            }
+        }
+
+        button {
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            color: $less-white-text-color;
+            border: none;
+
+            &:focus, &:hover{
+                background-color: $button-bg;
+                color: $white-text-color;
+            }
+        }
+    }
+
+    .hero {
+        color: $white-text-color;
+        position: relative;
+        z-index: 1;
+        margin-top: 12em;
+        padding: 2rem 4rem 2rem 10rem;
+
+        h1 {
+            font-size: 5rem;
+        }
+        p {
+            font: 1em sans-serif;
+            color: $less-white-text-color;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+        }
+        button {
+            color: $white-text-color;
+            background-color: $button-bg;
+            padding: 1rem 4rem;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: $white-text-color;
+                color: black;
+            }
+        }
+    }
+}
