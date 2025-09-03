@@ -1,2 +1,6 @@
-import './styles/style.scss';
+
+import about from './about-section.js';
+
+
+about();
 

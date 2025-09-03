@@ -21,8 +21,6 @@
     .nav {
 
         @include flex(space-between, center, row);
-
-        gap: 2rem;
         position: relative;
         z-index: 1;
 
