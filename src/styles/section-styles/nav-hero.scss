@@ -46,7 +46,7 @@
             color: $less-white-text-color;
             border: none;
 
-            &:focus, &:hover{
+            &:active, &:hover{
                 background-color: $button-bg;
                 color: $white-text-color;
             }
