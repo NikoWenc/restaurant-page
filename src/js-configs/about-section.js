@@ -1,6 +1,6 @@
-import './styles/style.scss';
+import '../styles/style.scss';
 import AppendElement from './appendElementClass';
-import chefImage from './images/cookin-like-a.jpg';
+import chefImage from '../images/cookin-like-a.jpg';
 
 export default function about () {
     const contentSection = new AppendElement('.content')
@@ -23,5 +23,6 @@ export default function about () {
 
     const aboutUsChefSection = new AppendElement('.about-us-chef')
         .append('img')
-        .imgSrc(chefImage, 'chef');
+        .addAttribute('src', chefImage)
+        .addAttribute('alt', 'chef');
 }
